@@ -24,11 +24,6 @@
     justify-content: center;
 
     padding: 8px;
-    border-top: 2px solid var(--dark);
-    border-left: 2px solid var(--dark);
-    border-right: 2px solid var(--dark);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     background-color: var(--light);
   }
 </style>

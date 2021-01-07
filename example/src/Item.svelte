@@ -14,7 +14,7 @@
 </style>
 
 {#if key}
-  <item>{key}: <em>{value}</em></item>
+  <item>{key}: <em>{value.x}</em>, <em>{value.y}</em></item>
 {:else}
   <item>{value}</item>
 {/if}

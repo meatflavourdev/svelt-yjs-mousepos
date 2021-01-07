@@ -1,3 +1,7 @@
+  html, body {
+    height: 100%;
+  }
+
 /* Regular CSS works in Svelte see https://imfeld.dev/writing/svelte_dynamic_css */
 
 :root {
@@ -8,6 +12,8 @@
   --medium: #ffddcb;
   --dark: #ff5600;
   --punch: #30bced;
+  --electric: #5d13f8;
+  --irish: #30ff70;
 
   --font-regular: 16px;
 }

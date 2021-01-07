@@ -5,7 +5,6 @@
 
 <style>
   panel {
-    border-top: 1px solid var(--medium);
     margin: 16px;
     display: flex;
     flex-direction: column;

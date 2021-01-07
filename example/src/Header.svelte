@@ -1,16 +1,18 @@
 <style>
   heading {
     display: block;
-    background-color: var(--medium);
+    background-color: var(--electric);
     padding: 16px;
-    padding-top: 110px;
     border-radius: 5px;
-    transform: scale(1.1);
-    background-image: url(/svelt-yjs-logo.png);
-    /* background-size: 400px 186px; */
+    text-align: center;
+    background-size: 400px 186px;
     background-size: 275px 64px;
     background-repeat: no-repeat;
     background-position: center 34px;
+    color:white;
+  }
+  h1 {
+
   }
   subtitle {
     display: block;
@@ -18,6 +20,7 @@
     font-size: var(--font-regular);
     color: var(--dark);
     margin-bottom: 24px;
+    color: var(--irish);
   }
   subtitle em {
     font-weight: bold;
@@ -29,11 +32,8 @@
 </style>
 
 <heading>
+  <h1 class="title">Entropy</h1>
   <subtitle>
-    Combining the
-    <em>reactivity of Svelte</em>
-    with<br />
-    the local-first, distributed
-    <em class="punch">synchronization of Yjs</em>.
+    An Asynchronous Realtime Collaborative Diagram Editor
   </subtitle>
 </heading>

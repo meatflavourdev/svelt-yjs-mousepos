@@ -3,11 +3,11 @@
   import { WebsocketProvider } from 'y-websocket';
   import { array, map } from 'svelt-yjs';
 
-  import Header from './Header.svelte';
-  import Explanation from './Explanation.svelte';
+
+  //import Explanation from './Explanation.svelte';
   import UndoPanel from './UndoPanel.svelte';
-  import AnimalArray from './AnimalArray.svelte';
   import AnimalMap from './AnimalMap.svelte';
+  import UserMap from './UserMap.svelte';
 
   // All Yjs types must be embedded in a Y.Doc
   const ydoc = new Y.Doc();
@@ -26,9 +26,13 @@
   // Create a Y.Map<number> in the Y.Doc
   const ymap = ydoc.getMap('dict');
 
+  // Create a Y.Map<number> in the Y.Doc
+  const userMap = ydoc.getMap('userdict');
+
   // Generate two Svelte readable stores from the Y types we just added to the Y.Doc
   const list = array.readable(yarray);
   const dict = map.readable(ymap);
+  const userdict = map.readable(userMap);
 
   // Add undo/redo manager
   const undoManager = new Y.UndoManager([list.y, dict.y], {
@@ -39,12 +43,8 @@
 <style>
   page {
     display: block;
-    background-color: var(--light);
-    width: 600px;
-    margin: 0 auto;
-    padding: 64px 0 256px 0;
-    border-left: 2px solid var(--dark);
-    border-right: 2px solid var(--dark);
+    margin: 0;
+    height: 100%;
   }
   action,
   subaction {
@@ -66,23 +66,13 @@
 </style>
 
 <page>
-  <Header />
+
   <content>
-    <Explanation />
 
-    <action>Try it out</action>
-    <subaction>
-      See what happens when:
-      <ul>
-        <li>you open this in another tab, then add animals!</li>
-        <li>you go offline, do stuff, then re-connect!</li>
-      </ul>
-    </subaction>
+    <!-- <UndoPanel {undoManager} /> -->
 
-    <UndoPanel {undoManager} />
+    <!-- <AnimalMap map={dict} /> -->
 
-    <AnimalArray array={list} />
-
-    <AnimalMap map={dict} />
+    <UserMap map={userdict} />
   </content>
 </page>
